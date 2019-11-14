@@ -47,12 +47,10 @@ devices in other fields of cyber crime, such as blackmailing.
 % Introduction -  The introduction/justification and purpose section includes the background information on the security 
 % issue and its importance.
 Internet of Things (IoT) devices have been gaining popularity the last few years. According to a recent survey by Statista 
-\cite{amount_iot_devices}, in 2016 there were 17.68 billion connected IoT devices installed worldwide. Iit is expected that in 2025 
+\cite{amount_iot_devices}, in 2016 there were 17.68 billion connected IoT devices installed worldwide. It is expected that in 2025 
 there will be more than 75 billion IoT devices installed that are connected. These IoT devices are small, cheap, and have
 huge potential to make common household items, such as for example thermostats, light switches, and power sockets, 
-"smart" and connected to the internet.
-\\\\
-While these IoT devices sound like a match made in heaven for anyone who wants to get more insight in their exact 
+"smart" and connected to the internet.While these IoT devices sound like a match made in heaven for anyone who wants to get more insight in their exact 
 electricity usage, or when you want to toggle the lights without getting out of bed, these cheap, low-power devices  are 
 a nightmare in the world of cyber security.
 \\\\
@@ -135,7 +133,7 @@ seven steps in the communication and operation of the Mirai botnet, which can be
  \label{fig:kolias_communication}
 \end{figure}
 ~\\
-Kolias et al. identify several Mirai variants, that for example use different ports than MIrai, or that install crypto currency
+Kolias et al. identify several Mirai variants, that for example use different ports than Mirai, or that install crypto currency
 miners on infected devices.They also identify more sophisticated IoT botnets that can infect more devices, and actually
 try to obfuscate their activity, through the use of encrypted command and control communication. They have also 
 identified botnets that communicate through decentralized means, instead of through a centralized command and 
@@ -149,7 +147,7 @@ Finally, the five main reasons why it is attractive to target IoT devices for bo
  \item \textit{Poor maintenance} - Most IoT devices are forgotten once they are set-up, as long as they keep functioning
  \item \textit{Considerable attack traffic} - Most IoT devices are powerful enough to produce DDoS traffic comparable 
  to a laptop or desktop pc.
- \item \textit{Noninteractive or minimally-interactive user interfaces} - Since IoT devices are meant to have little user 
+ \item \textit{Non-interactive or minimally-interactive user interfaces} - Since IoT devices are meant to have little user 
  intervention, infections are more likely to go unnoticed. When they \textit{are} noticed, there is no easy way for an user
  to address the issue, other than replacing the device.
 \end{itemize}
@@ -175,23 +173,74 @@ limited \textit{address space}, (160 bits of address space instead of the 128 bi
 and governance}, with \textit{data authentication and integrity}, with \textit{authentication, authorization and privacy}, 
 and with \textit{secure communications}.
 
-\subsection{The Effect of IoT New Features on Security and Privacy: New Threats, Existing Solutions, and Challenges Yet to Be Solved} \label{sec:literature_review:zhou2019}
-In \cite{Zhou2019}, Zhou et al. introduce the concept of "IoT features", and discuss the security and privacy effects of 
-eight of these IoT features. IoT features refer to the unique features of IoT devices, network, and applications.
+% Scrapped for now
+% \subsection{The Effect of IoT New Features on Security and Privacy: New Threats, Existing Solutions, and Challenges Yet to Be Solved} \label{sec:literature_review:zhou2019}
+% In \cite{Zhou2019}, Zhou et al. introduce the concept of "IoT features", and discuss the security and privacy effects of 
+% eight of these IoT features. IoT features refer to the unique features of IoT devices, network, and applications.
+% \\\\
+% The eight IoT features, accompanied with  that Zhou et al. identify are: Interdependence, Diversity, Constrained, Myriad, 
+% Unattended, Intimacy, Mobile, and Ubiquitous. These features are not independent, but interact with and influence each
+% other. An overview of all features, threats, challenges and opportunities can be found in \autoref{fig:zhou_features}
+% 
+% \begin{figure}[hbtp]
+%  \centering
+%  \includegraphics[width=0.45\linewidth]{zhou.png}
+%  \caption{IoT feature, threats, challenges and opportunities identified in \cite{Zhou2019}}
+%  \label{fig:zhou_features}
+% \end{figure}
+% ~\\
+% Lastly, Zhou et al. analyze previous research on IoT security, and illustrate the development trend and how their defined
+% IoT features reflect on the previous research, in order to identify IoT security research directions and priorities.
+
+\subsection{A Taxonomy of Botnet Behavior, Detection, and Defense} \label{sec:literature_review:Khattak2014}
+In \cite{Khattak2014}, Khattak et al. look existing botnet literature, and structure that in three different categories/
+taxonomies, botnet behavioral features, botnet detection and botnet defenses, highlighting per category areas where
+further research is needed. Khattak et al. do not exclusively look at IoT based botnets, but look at botnets in general.
 \\\\
-The eight IoT features, accompanied with  that Zhou et al. identify are: Interdependence, Diversity, Constrained, Myriad, 
-Unattended, Intimacy, Mobile, and Ubiquitous. These features are not independent, but interact with and influence each
-other. An overview of all features, threats, challenges and opportunities can be found in \autoref{fig:zhou_features}
+In the taxonomy of botnet behavior, Khattak et al. classify botnets based on their behavior. The behavioral features
+that Khattak et al. focus on concern \textit{Propagation}, \textit{Rallying}, \textit{Command \& Control}, \textit{Purpose},
+and \textit{Evasion}. The full taxonomy of botnet behavioral features can be found in \autoref{fig:khattak_behavior}.
 
 \begin{figure}[hbtp]
  \centering
- \includegraphics[width=0.45\linewidth]{zhou.png}
- \caption{IoT feature, threats, challenges and opportunities identified in \cite{Zhou2019}}
- \label{fig:zhou_features}
+ \includegraphics[width=0.9\linewidth]{khattak-behavior.png}
+ \caption{The botnet-behavior-based taxonomy described in \cite{Khattak2014}}
+ \label{fig:khattak_behavior}
 \end{figure}
 ~\\
-Lastly, Zhou et al. analyze previous research on IoT security, and illustrate the development trend and how their defined
-IoT features reflect on the previous research, in order to identify IoT security research directions and priorities.
+In the taxonomy of botnet detection, Khattak et al. classify different approaches of botnet detection. Khattak et al. 
+split the detection methods up in three different facets, namely \textit{bot detection}, \textit{Command \& Control
+detection}, and \textit{botmaster detection}. Furthermore, these facets are again split up in \textit{Active} and 
+\textit{Passive} detection methods, since while active methods are usually more effective, they usually also raise
+ethical and legal issues. The full taxonomy of botnet detection methods can be found in \autoref{fig:khattak_detection}.
+\\
+\begin{figure}[hbtp]
+ \centering
+ \includegraphics[width=0.9\linewidth]{khattak-detection.png}
+ \caption{The detection method-based taxonomy described in \cite{Khattak2014}}
+ \label{fig:khattak_detection}
+\end{figure}
+
+\noindent As seen in the taxonomy of botnet detection, Khattak et al. split each facet up in \textit{Active} and \textit{Passive}
+methods; they classified along the \textit{dimension} 'level of activity'. According to Khattak et al., these botnets can be
+classified along a lot more different dimensions. All dimensions Khattak et al. identify as being interesting to look at
+are: \textit{Specificity}, \textit{Discernment}, \textit{Mode of Operation}, \textit{Location of Deployment}, \textit{Level of
+Activity}, \textit{Degree of Automation}, \textit{Analysis Direction}, and \textit{Analysis Depth}.
+\\\\
+In the taxonomy of botnet defense strategies, Khattak et al. classify different methods of defense against infection.
+The strategies are categorized in two different categories, namely \textit{Preventive} strategies and \textit{Remedial}
+strategies. Preventive strategies concern the avoidance of botnet infection, and remedial strategies concern themselves
+with the cleaning of the system once an infection has happened. In the preventive category the defense mechanisms have
+been split up in \textit{Technical} and \textit{Non-Technical} approaches, and in the remedial category the defense mechanisms
+have been split up in \textit{Defensive} and \textit{Offensive} approaches. The full taxonomy of botnet defense strategies can 
+be found in \autoref{fig:khattak_defense}.
+\\
+\begin{figure}[hbtp]
+ \centering
+ \includegraphics[width=0.9\linewidth]{khattak-defense.png}
+ \caption{The defense strategy-based taxonomy described in \cite{Khattak2014}}
+ \label{fig:khattak_defense}
+\end{figure}
 
 \subsection{Motivating a market or regulatory solution to {IoT} insecurity with the Mirai botnet code} \label{sec:literature_review:Jerkins2017}
 In \cite{Jerkins2017}, Jerkins proposes a way to motivate IoT device operators to address poor security practices. Jerkins
@@ -219,15 +268,19 @@ governmental authority.
 %     needed complemented by additional metrics/datasets as explanatory factors.  Make sure you show how 
 %     the hypothesis is related to your literature review.
 In \autoref{sec:literature_review} we looked at five different pieces of literature related to the security of IoT 
-devices, IoT malware like Mirai, the involvement of IoT devices in DDoS attacks and how to motivate a market
-to improve IoT security with a regulatory solution.
+devices, IoT malware like Mirai, the involvement of IoT devices in DDoS attacks, botnets in general, and how 
+to motivate a market to improve IoT security with a regulatory solution.
 \\\\
-The literature we looked at mostly focused on IoT device involvement in DDoS attacks. But these IoT bots can
-be used for a lot more than just generating DDoS attacks. They can be used for sending spam emails, infecting
-other non-IoT devices with other kinds of malware, hosting phishing websites, and much more. 
+The literature we looked at mostly focused on IoT device involvement in DDoS attacks. But as seen in \cite{Khattak2014},
+botnets and thus also IoT botnets can be used for a lot more than just generating DDoS attacks. According to Khattak et. al
+in \cite{Khattak2014}, they can also be used for information gathering, distributed computing, cyber fraud (such as phishing),
+spreading malware, cyberwarfare, and unsolicited marketing (e.g. sending spam mails).
 \\\\
-In order to get a better grasp on how IoT bots are used, and what kind of threat they really are to the outside
-world,  we can ask ourselves the following questions:
+In this research we want to get a better grasp on how IoT bot(net)s are used, and what kind of threat they really are to the 
+outside world, so that we can better justify current spending on IoT security and IoT botnet prevention, and if necessary 
+justify an increase of IoT security spending. For this we take a look at a subset of the purposes defined by Khattak et al., and
+we look at use of IoT bot(net)s in unsolicited marketing, cyber fraud and spreading malware. When researching this, we 
+asked ourselves the following research questions:
 \begin{enumerate}
  \item[] \textbf{RQ1}: Are infected IoT devices used for other types of cyber crime than just DDoS attacks? \label{rq1}
  \begin{enumerate}
@@ -240,7 +293,10 @@ world,  we can ask ourselves the following questions:
 Before we answer these research questions, we of course have some expectations of the outcome of our research.
 Since sending spam emails and hosting malicious websites (e.g. phishing websites) are very common 
 \cite{common_cyber_crime},  simple/approachable forms of cyber crime, we expect that a significant amount of 
-infected IoT bots are also used in these types of cyber crime. Therefore, our hypotheses for this research are that:
+infected IoT bots are also used in these types of cyber crime. Since making malware/malicious executables, and actually
+infecting devices with malware is more difficult than sending spam / hosting phishing sites, we expect that there will not
+be a significant amount of IoT bots that are used for hosting malicious executables. Therefore, our hypotheses for this 
+research are that:
 \begin{itemize}
   \item[] \textbf{H1}: Infected IoT devices are used for other types of cyber crime than just DDoS attacks.
   \begin{itemize}
@@ -269,7 +325,7 @@ will use an email spam blacklist. The spam blacklist we have chosen to use is th
 an IP address is malicious with regard to sending spam or not.
 \\\\
 To answer \textbf{RQ1.2}, we will need to know which URLs / IP addresses are hosting phishing sites. For this we
-are using the Phishtank phishing url data set \cite{phishtank}. According to the FAQ hosted on the Phishtank website,
+are using the Phishtank phishing domain data set \cite{phishtank}. According to the FAQ hosted on the Phishtank website,
 "PhishTank is a free community site where anyone can submit, verify, track and share phishing data". The Phishtank
 data set contains a lot of information regarding phishing URLs, such as the phishing site URL, the submission time,
 whether the URL has been verified as actual phishing site, the IP address of the malicious URL and the phishing target.
@@ -278,7 +334,7 @@ For this research we will only use the submission time and IP address of verifie
 To answer \textbf{RQ1.3}, we will need to know which URLs / IP addresses are hosting malicious executables. For 
 this we are using two different sources, \url{malwaredomainlist.com} \cite{malwaredomainlist} and 
 \url{malc0de.com} \cite{malc0de}, since the amount of IPs / hosts used for distributing malware is relatively
-low. A small issue with the malc0de dataset, is that it only stores the last 30 days of malicious IPs. So to in order to 
+low. A small issue with the malc0de data set, is that it only stores the last 30 days of malicious IPs. So to in order to 
 download a more complete IP blacklist of the malc0de data set, we downloaded all blacklists starting from June 2016
 up until now, and combined that into one big IP blacklist.
 
@@ -290,7 +346,7 @@ that are used for sending spam emails / hosting phishing sites / hosting malicio
 There always is a (albeit low) probability that a few IP addresses in the data sets that we are comparing with are of 
 infected IoT devices, that have not been instructed by the botnet owner to do these malicious actions. We estimate 
 that this is the case with a probability of approximately 0.5\% of the vulnerable IoT devices. Since there is a difference 
-in the amount of unique IP addresses/devices in our dataset per day, we the day with the highest amount of unique 
+in the amount of unique IP addresses/devices in our data set per day, we the day with the highest amount of unique 
 IPs, 40158, connecting to the honeypot to be on the safe side in our statistics calculation.
 \\\\
 Since we assume that the infected IoT devices that are in the spam, phishing and malicious executable data sets, 
@@ -329,7 +385,7 @@ In \autoref{tbl:results_full} the results of our experiment can be seen, an exce
 \autoref{tbl:results_partial}. The first most obvious thing to notice are the
 columns for the \textit{Phishtank} data set and \textit{Malc0de and Malwaredomainlist} data set. These columns 
 have all zero values, meaning than none of the IP addresses of the vulnerable IoT devices found in our IoT honeypot 
-dataset have been found in the \textit{Phishtank}, \textit{Malc0de} or \textit{Malwaredomainlist} data sets. 
+data set have been found in the \textit{Phishtank}, \textit{Malc0de} or \textit{Malwaredomainlist} data sets. 
 \\\\
 There can be multiple different explanations for these zero columns. The first explanation is that these devices we have
 in our IoT honeypot data set have never been used for hosting phishing sites or malicious executables, or maybe they have
@@ -346,7 +402,7 @@ cannot be explained by luck/chance.
 %  \centering
  \begin{tabularx}{\linewidth}{lXXXXXX}
  \toprule
- File & Spamhaus ZEN (\#) & Spamhaus ZEN (\%) & Phishtank (\#) &  Phishtank (\%) & malc0de and mdl (\#) & malc0de and mdl (\%) \\
+ File & Spamhaus ZEN (\#) & Spamhaus ZEN (\%) & Phishtank (\#) &  Phishtank (\%) & Malc0de and Mdl (\#) & Malc0de and Mdl (\%) \\
  \midrule
  2016-07-01.csv & 411 & 1.59 & 0 & 0.00 & 0 & 0.00 \\
  2016-07-02.csv & 517 & 1.84 & 0 & 0.00 & 0 & 0.00 \\
@@ -360,9 +416,9 @@ cannot be explained by luck/chance.
 \end{table}
 ~\\
 Looking at columns 2 and 3 however, we see that we do have some hits for our  infected IoT devices in the Spamhaus
-ZEN data set. On average, 1.77\% of the infected IoT devices in our IoT honeypot dataset are also on the Spamhaus ZEN
+ZEN data set. On average, 1.77\% of the infected IoT devices in our IoT honeypot data set are also on the Spamhaus ZEN
 spam blacklist. As mentioned in \autoref{sec:methodology:stat_analysis}, we apply a T-test  and a Mann-Whitney U test
-to verify whether the amount of devices we see in the Spamhaus dataset is significant. 
+to verify whether the amount of devices we see in the Spamhaus data set is significant. 
 \\\\
 Since we have data about the exact number of devices and the percentages, we define two different null hypotheses, 
 $H_0^{exact}$ and $H_0^{percent}$, and we define them as:
@@ -373,7 +429,10 @@ $H_0^{exact}$ and $H_0^{percent}$, and we define them as:
  of 0.01\% and  a standard deviation of 0.005\% .
 \end{itemize}
 ~\\
-The results we got for our statistical tests can be found in \autoref{tbl:stats_exact} and \autoref{tbl:stats_percent}.
+The results we got for our statistical tests can be found in \autoref{tbl:stats_exact} and \autoref{tbl:stats_percent}. We 
+can clearly see that in both the statistical tests with the exact number of IP addresses and the statistical tests with a 
+percentage of the amount of IP addresses, that the p-values of the tests are strong enough to reject  $H_0^{exact}$ 
+\textit{and} $H_0^{percent}$ ($p \leq 0.01$) in both the T-test and the Mann-Whitney U test.
 
 \begin{table}[H]
     \centering
@@ -412,9 +471,9 @@ While we do believe that our research methodology described in \autoref{sec:meth
 limitations that we run into during research. In this section we will describe those limitations, and we would like to have different
 in an, albeit ideal, future research.
 \\\\
-The first limitation we would like to discuss is IP turnover. IP turnover is the concept of that a lot are not static, but instead are
+The first limitation we would like to discuss is IP turnover. IP turnover is the concept that a lot of IP addresses are not static, but instead are
 dynamically leased for a certain time period. Most home internet connections have dynamic IP addresses, meaning that they have
-"ownership" of an IP address for a certain lease time, and after some time, for example 7 days, the lease has to be renewed. When
+"ownership" of an IP address for a certain lease time, and after that lease time, for example 7 days, the lease has to be renewed. When
 the lease is renewed, you can get a lease for the same IP again, but if it has already been taken you get another IP. The limitation
 we came across is that while we can minimize the impact of IP turnover in the IoT honeypot data set, by looking only at the data of
 one day at a time, this becomes more difficult for our other data sets. Therefore when we find an infected IoT IP in the other data sets,
@@ -493,6 +552,13 @@ found are the fact that we have to account for IP turnover and that it is very p
 entire threat landscape and malicious IPs. In \autoref{sec:limitations} we also identified that in future research it might also
 be interesting to look at IoT botnet involvement in  distribution of child pornography, bots being used as proxies, and the 
 use of IoT devices to acquire blackmail material.
+\\\\
+Finally, looking at our results and the security issue that we introduced in the introduction, how do our results influence the
+security issue at hand? While we cannot argue with the fact that the DDoS attacks that can be generated by these upcoming
+IoT botnets are disastrous, for now at least we can say that these DDoS attacks are probably the worst thing we can expect from
+these IoT botnets. But while for now these IoT botnets are still in an 'infant' stage with regard to application of the botnet,
+we know that botmasters are not stupid themselves. It is only a matter of time before these massive IoT botnets are put
+to their full potential, and the only thing that can slow these botnets down is better security of our beloved IoT devices.
 
 \bibliographystyle{abbrv}
 \bibliography{bibliography}
@@ -503,7 +569,7 @@ use of IoT devices to acquire blackmail material.
 %  \centering
  \begin{tabularx}{\linewidth}{lXXXXXX}
  \toprule
- File & Spamhaus ZEN (\#) & Spamhaus ZEN (\%) & Phishtank (\#) &  Phishtank (\%) & malc0de and mdl (\#) & malc0de and mdl (\%) \\
+ File & Spamhaus ZEN (\#) & Spamhaus ZEN (\%) & Phishtank (\#) &  Phishtank (\%) & Malc0de and Mdl (\#) & Malc0de and Mdl (\%) \\
  \midrule
  2016-07-01.csv & 411 & 1.59 & 0 & 0.00 & 0 & 0.00 \\
  2016-07-02.csv & 517 & 1.84 & 0 & 0.00 & 0 & 0.00 \\
