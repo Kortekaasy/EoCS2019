@@ -35,7 +35,7 @@
 % Abstract - The abstract should be no longer than 100 to 150 words. It should convey the topic and research question, the hypothesis, 
 % the key findings and key discussion points – all within the 150 word limit.
 In this research, we look at IoT botnets and whether they are used for cyber criminal activities other than generating DDoS attacks. 
-For this we compare the IPs of  known infected IoT devices with IPs found in spam, phishing and malicious executable hosting data 
+For this we compare the IP addresses of  known infected IoT devices with IP addresses found in spam, phishing and malicious executable hosting data 
 sets. Our main research question is "Are infected IoT devices used for other types of cyber crime than just DDoS attacks?" with main 
 hypothesis that yes, infected IoT devices are used for other types of cyber crime than just DDoS attacks. Our findings are that a 
 statistical significant amount of infected IoT devices \textit{are} used for sending spam emails, but this is not the case for hosting 
@@ -73,7 +73,7 @@ customers that they are targeting are (usually) not the victims of DDoS attacks,
 that their devices have been breached! And if a customer is not aware of the impact of the (lack of) security of their IoT device,
 why would they pay more for a more secure IoT device with the same functionality?
 \\\\
-In this report we will review current research on the security issue in \autoref{sec:literature_review}. We will follow up with
+In this report we will review current research on the security issue, vulnerable IoT devices and (IoT) botnets, in \autoref{sec:literature_review}. We will follow up with
 defining our own research questions and hypotheses in \autoref{sec:research_questions}. In \autoref{sec:methodology} we
 describe how we will answer the research questions, and test the hypotheses. \autoref{sec:results} will contain the results
 of our research, followed by the limitations of our research in \autoref{sec:limitations}. Finally we will conclude in 
@@ -107,7 +107,7 @@ recommends are:
  on their devices.
 \end{itemize}
 
-Some of the best security practices for IoT devices that Angrishi identifies are:
+\noindent Some of the best security practices for IoT devices that Angrishi identifies are:
 \begin{itemize}
  \item Changing the default password of their device
  \item Always update their IoT devices with security updates as soon as they are made available
@@ -117,7 +117,7 @@ Some of the best security practices for IoT devices that Angrishi identifies are
 
 \subsection{{DDoS} in the {IoT}: Mirai and Other Botnets} \label{sec:literature_review:kolias2017}
 In \cite{Kolias2017}, Kolias et al. look at the Mirai botnet, its main components, how it operates and how it communicates.
-Furthermore they also at Mirai variants and other IoT botnets, and identify five main reasons why IoT devices are
+Furthermore they also look at Mirai variants and other IoT botnets, and identify five main reasons why IoT devices are
 advantageous for creating IoT botnets.
 \\\\
 Kolias et al. identify four main components in the Mirai botnet. The \textit{Bots} are the infected IoT devices, the 
@@ -134,7 +134,7 @@ seven steps in the communication and operation of the Mirai botnet, which can be
 \end{figure}
 ~\\
 Kolias et al. identify several Mirai variants, that for example use different ports than Mirai, or that install crypto currency
-miners on infected devices.They also identify more sophisticated IoT botnets that can infect more devices, and actually
+miners on infected devices. They also identify more sophisticated IoT botnets that can infect more devices, and actually
 try to obfuscate their activity, through the use of encrypted command and control communication. They have also 
 identified botnets that communicate through decentralized means, instead of through a centralized command and 
 control server.
@@ -223,7 +223,7 @@ ethical and legal issues. The full taxonomy of botnet detection methods can be f
 
 \noindent As seen in the taxonomy of botnet detection, Khattak et al. split each facet up in \textit{Active} and \textit{Passive}
 methods; they classified along the \textit{dimension} 'level of activity'. According to Khattak et al., these botnets can be
-classified along a lot more different dimensions. All dimensions Khattak et al. identify as being interesting to look at
+classified along a lot more, different dimensions. All dimensions Khattak et al. identify as being interesting to look at
 are: \textit{Specificity}, \textit{Discernment}, \textit{Mode of Operation}, \textit{Location of Deployment}, \textit{Level of
 Activity}, \textit{Degree of Automation}, \textit{Analysis Direction}, and \textit{Analysis Depth}.
 \\\\
@@ -272,13 +272,14 @@ devices, IoT malware like Mirai, the involvement of IoT devices in DDoS attacks,
 to motivate a market to improve IoT security with a regulatory solution.
 \\\\
 The literature we looked at mostly focused on IoT device involvement in DDoS attacks. But as seen in \cite{Khattak2014},
-botnets and thus also IoT botnets can be used for a lot more than just generating DDoS attacks. According to Khattak et. al
+botnets (and thus also IoT botnets) can be used for a lot more than just generating DDoS attacks. According to Khattak et. al
 in \cite{Khattak2014}, they can also be used for information gathering, distributed computing, cyber fraud (such as phishing),
 spreading malware, cyberwarfare, and unsolicited marketing (e.g. sending spam mails).
 \\\\
 In this research we want to get a better grasp on how IoT bot(net)s are used, and what kind of threat they really are to the 
-outside world, so that we can better justify current spending on IoT security and IoT botnet prevention, and if necessary 
-justify an increase of IoT security spending. For this we take a look at a subset of the purposes defined by Khattak et al., and
+outside world, so that we can better justify current spending on IoT security and IoT botnet prevention, and if there is a
+serious enough security issue, even
+justify an increase of IoT security spending. For this we take a look at a subset of the botnet purposes defined by Khattak et al., and
 we look at use of IoT bot(net)s in unsolicited marketing, cyber fraud and spreading malware. When researching this, we 
 asked ourselves the following research questions:
 \begin{enumerate}
@@ -315,7 +316,7 @@ research are that:
 In order to research \textbf{RQ1}, \textbf{RQ1.1}, \textbf{RQ1.2}, and \textbf{RQ1.3}, we will need some data.
 First of all we need have an idea of what infected IoT devices are, and how many there are. For that we have
 an IoT honeypot data set \cite{iot_honeypot_dataset}. This data set contains 47 days of recorded malicious traffic 
-IoT botnet traffic. This data set recorded per connection it received a timestamp, source IP/port of the infected IoT 
+IoT botnet traffic. This data set recorded per connection it received: a timestamp, source IP/port of the infected IoT 
 device, destination IP/port in the honeypot, and a list of commands that the infected source tried to execute. This 
 data set will give us a baseline of which IPs we encounter are vulnerable IoT devices.
 \\\\
@@ -326,7 +327,7 @@ an IP address is malicious with regard to sending spam or not.
 \\\\
 To answer \textbf{RQ1.2}, we will need to know which URLs / IP addresses are hosting phishing sites. For this we
 are using the Phishtank phishing domain data set \cite{phishtank}. According to the FAQ hosted on the Phishtank website,
-"PhishTank is a free community site where anyone can submit, verify, track and share phishing data". The Phishtank
+"PhishTank is a free community site where anyone can submit, verify, track and share phishing data"\footnote{\url{https://www.phishtank.com/faq.php\#whatisphishtank}}. The Phishtank
 data set contains a lot of information regarding phishing URLs, such as the phishing site URL, the submission time,
 whether the URL has been verified as actual phishing site, the IP address of the malicious URL and the phishing target.
 For this research we will only use the submission time and IP address of verified phishing URLs.
@@ -335,7 +336,8 @@ To answer \textbf{RQ1.3}, we will need to know which URLs / IP addresses are hos
 this we are using two different sources, \url{malwaredomainlist.com} \cite{malwaredomainlist} and 
 \url{malc0de.com} \cite{malc0de}, since the amount of IPs / hosts used for distributing malware is relatively
 low. A small issue with the malc0de data set, is that it only stores the last 30 days of malicious IPs. So to in order to 
-download a more complete IP blacklist of the malc0de data set, we downloaded all blacklists starting from June 2016
+download a more complete IP blacklist of the malc0de data set, we downloaded with the help of the Internet Archive's
+"Wayback Machine"\footnote{\url{https://archive.org/web/web.php}}, all blacklists starting from June 2016
 up until now, and combined that into one big IP blacklist.
 
 \subsection{Statistical Analysis} \label{sec:methodology:stat_analysis}
@@ -343,20 +345,20 @@ With the data collected from \autoref{sec:methodology:data}, we actually make so
 For answering \textbf{RQ1.1}, \textbf{RQ1.2}, and \textbf{RQ1.3}, respectively testing \textbf{H1.1}, \textbf{H1.2}, 
 and \textbf{H1.3}, the process looks roughly the same. We assume that the botnet owners choose infected IoT bots 
 that are used for sending spam emails / hosting phishing sites / hosting malicious malware executables at random.
-There always is a (albeit low) probability that a few IP addresses in the data sets that we are comparing with are of 
+There always is a (albeit low) probability that a few IP addresses in the data sets that we are comparing with are from 
 infected IoT devices, that have not been instructed by the botnet owner to do these malicious actions. We estimate 
 that this is the case with a probability of approximately 0.5\% of the vulnerable IoT devices. Since there is a difference 
-in the amount of unique IP addresses/devices in our data set per day, we the day with the highest amount of unique 
-IPs, 40158, connecting to the honeypot to be on the safe side in our statistics calculation.
+in the amount of unique IP addresses/devices in our data set per day, we take the day with the highest amount of unique 
+IPs (40158) connecting to the honeypot to be on the safe side in our statistics calculation.
 \\\\
 Since we assume that the infected IoT devices that are in the spam, phishing and malicious executable data sets, 
 and the infected IoT devices that the bot owners choose to do their dirty work are randomly chosen with probability
 $p = 0.005$, we can approximate this binomial distribution with a normal distribution. With the amount of devices
 we have, $n = 40158$, and our probability we can verify that $n \cdot p \geq 25$ and $n \cdot (1-p) \geq 25$, and
 thus we can approximate the distribution with a normal distribution with $\mu = n \cdot p = 200.79$ and 
-$\sigma = \sqrt{n \cdot p \cdot (1-p)} \approx 14.13$. In the case that we compare percentages of devices that are
-in the spam / phishing / malicious executable data set, we take a normal distribution with $\mu = p =0.005$ and 
-$\sigma = p \cdot (1-p) = 0.004975$.
+$\sigma = \sqrt{n \cdot p \cdot (1-p)} \approx 14.13$. We will also compare percentages of devices that are
+in the spam / phishing / malicious executable data set, and in this case we take a normal distribution with 
+$\mu = p =0.005$ and  $\sigma = p \cdot (1-p) = 0.004975$.
 \\\\
 We then use a both a T-test and a Mann-Whitney U test to verify our hypotheses and to  test whether the amount 
 of IoT bots used for sending spam emails / hosting phishing sites / hosting malicious malware executables are 
@@ -381,7 +383,7 @@ depend on the results we get when answering the sub-research questions and sub-h
 %     supporting that hypothesis means.
 % o Explain what you think the statistical results imply.
 
-In \autoref{tbl:results_full} the results of our experiment can be seen, an excerpt of that table can be seen in 
+In the appendix in \autoref{tbl:results_full} the results of our experiment can be seen, an excerpt of that table can be seen in 
 \autoref{tbl:results_partial}. The first most obvious thing to notice are the
 columns for the \textit{Phishtank} data set and \textit{Malc0de and Malwaredomainlist} data set. These columns 
 have all zero values, meaning than none of the IP addresses of the vulnerable IoT devices found in our IoT honeypot 
@@ -389,11 +391,11 @@ data set have been found in the \textit{Phishtank}, \textit{Malc0de} or \textit{
 \\\\
 There can be multiple different explanations for these zero columns. The first explanation is that these devices we have
 in our IoT honeypot data set have never been used for hosting phishing sites or malicious executables, or maybe they have
-not even been used for other things than expanding the botnet and performing DDoS attacks. The latter seems unlikely, 
+not even been used for any other thing than expanding the botnet and performing DDoS attacks. The latter seems unlikely, 
 since we do get hits from the Spamhaus ZEN data set, but the former could be the case. 
 \\\\
 A different explanation could be that our data sets are incomplete. While this could be the case  for the Malc0de and
-Malwaredomainlist data sets, since with their respective sizes of 2345 and 997 entries, this seems unlikely for the
+Malwaredomainlist data sets, since with their respective sizes of 2345 and 997 entries the combined data set is quite small, this seems unlikely for the
 PhishTank data set with over 500,000 entries.  Therefore we deem it possible that we just had "bad luck" with our
 Malc0de and Malwaredomainlist data sets, but the fact that none of the IoT botnet IPs are in the Phishtank data set 
 cannot be explained by luck/chance.
@@ -426,7 +428,7 @@ $H_0^{exact}$ and $H_0^{percent}$, and we define them as:
  \item[] $H_0^{exact}:$ The amount of infected IoT devices sending spam emails is normally distributed with a mean 
  of 401.68 and  a standard deviation of 200.79.
  \item[] $H_0^{percent}:$ The amount of infected IoT devices sending spam emails is normally distributed with a mean 
- of 0.01\% and  a standard deviation of 0.005\% .
+ of 0.005 and  a standard deviation of 0.004975 .
 \end{itemize}
 ~\\
 The results we got for our statistical tests can be found in \autoref{tbl:stats_exact} and \autoref{tbl:stats_percent}. We 
@@ -468,8 +470,8 @@ percentage of the amount of IP addresses, that the p-values of the tests are str
 % Limitations -  Assess the limitations of your research and discuss the recommendations for others who may research this topic 
 % (i.e. what would you do differently?)
 While we do believe that our research methodology described in \autoref{sec:methodology} is sound, there are of course always 
-limitations that we run into during research. In this section we will describe those limitations, and we would like to have different
-in an, albeit ideal, future research.
+limitations that we run into during research. In this section we will describe those limitations, and  what we would like to have 
+done different in an, albeit ideal, future research.
 \\\\
 The first limitation we would like to discuss is IP turnover. IP turnover is the concept that a lot of IP addresses are not static, but instead are
 dynamically leased for a certain time period. Most home internet connections have dynamic IP addresses, meaning that they have
@@ -488,11 +490,12 @@ hosts that host malicious executables. Therefore, in an ideal next research it w
 regarding the hosting of malicious executables. Some feasible improvements for the spam and phishing data sets can be made by 
 looking at other data sets that only store malicious URLs, and performing DNS queries for those URLs to find out the malicious IPs.
 Issues with this approach are however that the IP for an URL might change, for example due to IP turnover or changing the hosting
-service. Also, some malicious URLs point to legitimate servers that have shared hosting, so it is not quite correct to regard IPs that
-malicious URLs point to as malicious IPs.
+service. Also, some malicious URLs point to legitimate servers that have so-called shared hosting, so it is not quite correct to regard 
+IPs that malicious URLs point to as malicious IPs.
 \\\\
 The third limitation we would like to discuss are the categories of cyber crime that we looked at in the research. Due to time 
-constraints, we only looked at data sets regarding spam, phishing and hosting of malicious executables. There are other fields of 
+constraints, we only looked at data sets regarding spam, phishing and hosting of malicious executables. As seen in the paper by 
+Khattak et al. \cite{Khattak2014}, there are other fields of 
 cyber crime where these kind of bots/botnets can be used that we haven't looked at yet. In a future research we would also like to 
 look at the involvement of these IoT botnets in for example: distribution of child pornography, bots being used as proxies by hackers
 as a means to hide their identity, and the use of IoT devices like network cameras to acquire blackmail material.
@@ -503,7 +506,7 @@ as a means to hide their identity, and the use of IoT devices like network camer
 % o Include a substantive answer to your research question and how it supports or does not support existing literature.
 % o Discuss the relevance of your results in reference to the problem you presented in the introduction.
 In this research we investigated the question whether IoT botnets have other uses than generating huge amounts of DDoS traffic.
-We did this by first stating the issue in \autoref{sec:introduction}, and looking at related work on IoT botnets in \autoref{sec:literature_review}.
+We did this by first stating the issue in \autoref{sec:introduction}, and looking at related work on IoT security and (IoT) botnets in \autoref{sec:literature_review}.
 In \autoref{sec:research_questions} we defined our research questions and hypothesis. For readability's sake we repeat them below:
 
 \begin{enumerate}
@@ -515,7 +518,7 @@ In \autoref{sec:research_questions} we defined our research questions and hypoth
  \end{enumerate}
 \end{enumerate}
 \begin{itemize}
-  \item[] \textbf{H1}: Infected IoT devices are used for other types of cyber crim than just DDoS attacks.
+  \item[] \textbf{H1}: Infected IoT devices are used for other types of cyber crime than just DDoS attacks.
   \begin{itemize}
     \item[] \textbf{H1.1} A statistically significant amount of infected IoT devices are used to send spam emails.
     \item[] \textbf{H1.2} A statistically significant amount of infected IoT devices are used to host malicious websites.
